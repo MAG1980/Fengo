@@ -6,10 +6,159 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fengo</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Merriweather+Sans:wght@400;700;800&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script async src="https://use.fontawesome.com/fd51dec46b.js"></script>
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__wrapper">
+                    <ul class="header__top-left">
+                        <li class="header__top-list"><a href="#" class="header__top-link">My Account</a></li>
+                        <li class="header__top-list"><a href="#" class="header__top-link">MY Wishlist (0)</a></li>
+                        <li class="header__top-list"><a href="#" class="header__top-link">Checkout</a></li>
+                        <li class="header__top-list"><a href="#" class="header__top-link">Log In or Register</a></li>
+                    </ul>
+                    <ul class="header__top-right">
+                        <li class="header__top-list">US Dollar</li>
+                        <li class="header__top-list">English</li>
+                        <li class="header__top-list">My Bag: 0 item(s)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom container">
+            <form class="header__finder">
+                <input type="text" class="header__finder-input" type="text" placeholder="Find it here...">
+                <img class="header__finder-image" src="img/icons/search_icon.png" alt="поиск">
+            </form>
+            <div class="header__menu">
+                <a class="header__logo header__link" href="#">
+                    <img class="header__logo-img" src="img/logo.png" alt="логотип">
+                    <p class="header__logo-text">FENGO</p>
+
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Fashion</a></li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Electronics</a>
+                        </li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Gifts</a></li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Books</a></li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">At Home</a></li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Music</a></li>
+                        <li class="header__list-item"><a href="#" class="header__link header__link_ml">Sale</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="offer">
+        <div class="offer__arrow-left">&#xf137;</div>
+        <div class="container">
+            <div class="offer__block">
+                <div class="offer__text">
+                    <p class="offer__middle-text">Check your</p>
+                    <h3 class="offer__heading">autumn style</h3>
+                    <p class="offer__normal-text">All the trends you need this season</p>
+                    <p class="offer__small-text">read it now</p>
+                </div>
+            </div>
+            <p class="offer__text-center">1920 x 1070 px</p>
+            <div class="offer__lister">
+                <span class="offer__lister-item"></span>
+                <span class="offer__lister-item"></span>
+                <span class="offer__lister-item"></span>
+            </div>
+        </div>
+        <div class="offer__arrow-right">&#xf138;</div>
+    </section>
+    <section class="blocks">
+        <div class="container blocks__content">
+            <div class="blocks__wide">
+                <div class="blocks__wide-content">
+                    <div class="blocks__wide-slider">
+                        <div class="blocks__arrow-left">&#xf137;</div>
+                        <img class="blocks__offer-image" src="img/autumn_1.jpg" alt="осенний лес">
+                        <div class="blocks__offer">
+                            <h4 class="blocks__heading"><span class="blocks__heading-line"></span>exclusive<span
+                                    class="blocks__heading-line"></span></h4>
+                            <p class="blocks__heading-text">discount codes & offers</p>
+                        </div>
+                        <div class="blocks__arrow-right">&#xf138;</div>
+                        <p class="blocks__text-bottom blocks__text-bottom_slider">get your discount</p>
+                    </div>
+                </div>
+                <div class="blocks__wide-bottom">
+                    <div class="blocks__wide-left">
+                        <div class="blocks__wide-left-item blocks__wide-left-item-top">
+                            <img class="blocks__wide-left-img" src="img/autumn_2.jpg" alt="осенний мост">
+                            <div class="blocks__wide-left-absolute">
+                                <h4 class="blocks__wide-left-item-heading">jewelry</h4>
+                                <p class="blocks__wide-left-item-text">every third item is free!</p>
+                                <p class="blocks__wide-left-item-text-bottom">buy now</p>
+                            </div>
+                        </div>
+                        <div class="blocks__wide-left-item blocks__wide-left-item-bottom">
+                            <img class="blocks__wide-left-img" src="img/autumn_3.jpg" alt="осенний мост">
+                            <div class="blocks__wide-left-absolute">
+                                <h4 class="blocks__wide-left-item-heading"><span
+                                        class="blocks__wide-left-item-heading-span"></span>accessories<span
+                                        class="blocks__wide-left-item-heading-span"></span></h4>
+                                <p class="blocks__wide-left-item-text">every third item is free!</p>
+                                <p class="blocks__wide-left-item-text-bottom">get the look</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blocks__wide-right">
+                        <img class="blocks__wide-right-img" src="img/autumn_4.jpg" alt="осенние скамейки">
+                        <div class="blocks__wide-right-absolute">
+                            <h4 class="blocks__wide-right-item-heading">LOOKBOOK</h4>
+                            <p class="blocks__wide-right-item-heading-text"><span
+                                    class="blocks__wide-right-item-heading-span-left"></span>women<span
+                                    class="blocks__wide-right-item-heading-span-right"></span></p>
+                            <p class="blocks__wide-right-item-heading-text-bottom">autumn 2013</p>
+                            <p class="blocks__wide-left-item-text-bottom">get the look</p>
+                            <div class="blocks__lister">
+                                <span class="blocks__lister-item"></span>
+                                <span class="blocks__lister-item"></span>
+                                <span class="blocks__lister-item"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blocks__slim">
+                <div class="blocks__slim-top">
+                    <img class="blocks__slim-top-img" src="img/autumn_5.jpg" alt="осенний мост">
+                    <div class="blocks__slim-top-absolute">
+                        <p class="blocks__slim-top-text-top">the</p>
+                        <h4 class="blocks__slim-top-item-heading"><span
+                                class="blocks__slim-top-heading-span-left"></span>hottest styles<span
+                                class="blocks__slim-top-heading-span-right"></span></h4>
+                        <p class="blocks__slim-top-text">are here</p>
+                        <p class="blocks__slim-top-text-bottom">watch now</p>
+                    </div>
+                </div>
+                <div class="blocks__s-bottom">
+                    <img class="blocks__slim-bottom-img" src="img/autumn_6.jpg" alt="осенний мост">
+                    <h4 class="blocks__slim-bottom-item-heading">what's new?</h4>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
 
     <script src="js/main.min.js"></script>
 </body>
