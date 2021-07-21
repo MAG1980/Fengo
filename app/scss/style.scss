@@ -720,4 +720,32 @@ h4 {
         color: #999999;
         background-color: #cccccc;
     }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__footer-line {
+        flex-grow: 1;
+        border-bottom: 1px solid #dddddd;
+    }
+    &__footer-text {
+        min-width: 11%;
+        font-family: "Merriweather Sans";
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #555555;
+    }
+    &__footer-link {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 80px 20px;
+        transition: 0.3s;
+        &:hover {
+            color: $accent;
+        }
+    }
 }
