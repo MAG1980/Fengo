@@ -790,7 +790,9 @@ h4 {
         font-weight: 400;
         text-transform: uppercase;
         color: #b6b6b6;
-        margin-bottom: 34px;
+        &_mb {
+            margin-bottom: 34px;
+        }
     }
     &__top-about-content {
         display: flex;
@@ -833,16 +835,25 @@ h4 {
         grid-column-end: 3;
         border-left: 1px solid #2a2a2a;
         border-bottom: 1px solid #2a2a2a;
+        max-width: 98%;
     }
     &__top-favorite-header {
         display: flex;
         justify-content: space-between;
         padding: 0 6%;
+
+        margin-bottom: 34px;
+        &_aic {
+            align-items: center;
+        }
     }
     &__top-favorite-cards {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        &_start {
+            justify-content: start;
+        }
     }
     &__actual-price {
         color: #ffffff;
@@ -946,11 +957,24 @@ h4 {
         cursor: pointer;
     }
     &__top-email {
+        position: relative;
         grid-row-start: 6;
         grid-row-end: 7;
         grid-column-end: 2;
         border-bottom: 1px solid #2a2a2a;
         border-left: none;
+        &::after {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            content: ">";
+            font-family: "Didact Gothic";
+            font-size: 27px;
+            line-height: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #999999;
+        }
     }
     &__top-email-input {
         border: 1px solid #666666;
@@ -958,5 +982,118 @@ h4 {
         padding-left: 21px;
         box-sizing: border-box;
         outline: none;
+    }
+    &__top-promokit {
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-end: 3;
+        border-left: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
+    }
+    &__top-button {
+        padding: 6px 11px;
+        text-decoration: none;
+        font-family: "Merriweather Sans";
+        font-size: 12.1px;
+        line-height: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #b5b5b5;
+        background-color: rgba(250, 250, 250, 0);
+        border: 1px solid #b5b5b5;
+        transition: 0.3s;
+        &:hover {
+            color: rgba(250, 250, 250, 1);
+            background-color: #b5b5b5;
+        }
+    }
+    &__top-promokit-img-wrapper {
+        margin-left: 17%;
+    }
+    &__top-promokit-img {
+        object-fit: cover;
+        height: 100%;
+    }
+    &__top-promokit-content {
+        display: flex;
+    }
+    &__top-promokit-heading {
+        font-family: "Roboto Condensed";
+        font-size: 17.1px;
+        line-height: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #b1b1b1;
+        margin-bottom: 9px;
+    }
+    &__top-promokit-description {
+        margin-left: 35px;
+    }
+    &__top-promokit-text {
+        font-family: Arial;
+        font-size: 13.1px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #777777;
+    }
+    &__top-promokit-bottom-text {
+        font-family: Arial;
+        font-size: 14.1px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #888888;
+        margin: 23px 7% 18px;
+        & span {
+            color: #cccccc;
+        }
+    }
+    &__top-promokit-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 7%;
+        &_mb44 {
+            margin-bottom: 44px;
+        }
+        &_mb50 {
+            margin-bottom: 50px;
+        }
+    }
+    &__top-promokit-date {
+        flex-basis: 37.5%;
+        font-family: Arial;
+        font-size: 13.1px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #666666;
+    }
+    &__top-promokit-buttons {
+        flex-basis: 37.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__top-promokit-reply,
+    &__top-promokit-retweet {
+        text-decoration: none;
+        font-family: Arial;
+        font-size: 13.1px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #666666;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__top-promokit-reply {
+        &::before {
+            content: url(../img/icons/reply.png);
+            margin-right: 8px;
+        }
+    }
+    &__top-promokit-retweet {
+        &::before {
+            content: url(../img/icons/share.png);
+            margin-right: 8px;
+        }
     }
 }
