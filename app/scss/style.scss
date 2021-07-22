@@ -835,7 +835,8 @@ h4 {
         grid-column-end: 3;
         border-left: 1px solid #2a2a2a;
         border-bottom: 1px solid #2a2a2a;
-        max-width: 98%;
+        max-width: 96%;
+        margin: 0 auto;
     }
     &__top-favorite-header {
         display: flex;
@@ -995,7 +996,6 @@ h4 {
         text-decoration: none;
         font-family: "Merriweather Sans";
         font-size: 12.1px;
-        line-height: 26px;
         font-weight: 400;
         text-transform: uppercase;
         color: #b5b5b5;
@@ -1095,5 +1095,33 @@ h4 {
             content: url(../img/icons/share.png);
             margin-right: 8px;
         }
+    }
+    &__top-facebook {
+        grid-row-start: 5;
+        grid-row-end: 7;
+        grid-column-end: 3;
+        border-left: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
+    }
+    &__top-facebook-cards {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 7%;
+        justify-content: center;
+        align-items: center;
+    }
+    &__top-facebook-photo-wrapper {
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__top-facebook-photo {
+        object-fit: cover;
+        max-width: 100%;
+        border: 7px solid #2f2f2f;
+        box-sizing: border-box;
     }
 }
