@@ -30,9 +30,13 @@ h4 {
     }
     &__top-link {
         text-decoration: none;
+        padding: 8px 20px 9px;
+        transition: 0.3s;
+        &:hover {
+            color: $accent;
+        }
     }
     &__top-list {
-        margin-left: 40px;
     }
     &__bottom {
     }
@@ -61,13 +65,15 @@ h4 {
     &__menu {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 19px;
+        align-items: center;
     }
     &__logo {
         display: flex;
         justify-content: start;
         align-items: center;
+        &:hover &-text {
+            color: $accent;
+        }
     }
     &__logo-text {
         font-family: "Merriweather Sans";
@@ -93,8 +99,10 @@ h4 {
     }
     &__link {
         text-decoration: none;
-        &_ml {
-            margin-left: 48px;
+        padding: 19px 24px;
+        transition: 0.3s;
+        &:hover {
+            color: $accent;
         }
     }
 }
@@ -1183,7 +1191,8 @@ h4 {
     background-color: rgba(250, 250, 250, 0);
     border: 2px solid #999999;
     text-align: right;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
     &::after {
         position: absolute;
         content: " \f106";
@@ -1192,5 +1201,8 @@ h4 {
         top: 3px;
         left: 12px;
         margin-right: 100px;
+    }
+    &:hover {
+        background-color: rgba(250, 250, 250, 1);
     }
 }
