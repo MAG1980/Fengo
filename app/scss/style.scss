@@ -29,6 +29,12 @@ h4 {
         list-style-type: none;
     }
     &__top-link {
+        font-family: "Merriweather Sans";
+        font-size: 11px;
+        line-height: 19px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #7e7e7e;
         text-decoration: none;
         padding: 8px 20px 9px;
         transition: 0.3s;
@@ -88,6 +94,7 @@ h4 {
     &__list {
         display: flex;
         list-style-type: none;
+        padding-left: 0;
     }
     &__list-item {
         font-family: Cousine;
@@ -262,21 +269,57 @@ h4 {
         max-width: 100%;
         height: 100%;
     }
+    &__offer-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 33px;
+        margin-bottom: 19px;
+        &_women {
+            align-items: center;
+        }
+    }
+    &__offer-line {
+        flex-grow: 1;
+        border-bottom: 3px solid #ffffff;
+        &_accessories {
+            border-bottom: 2px solid #ffffff;
+        }
+        &_women {
+            border-bottom: 1px solid #ffffff;
+        }
+        &_styles {
+            border-bottom: 1px solid #333333;
+        }
+    }
     &__heading {
         font-family: Cousine;
         font-size: 40px;
         font-weight: 700;
         text-transform: uppercase;
         color: #ffffff;
-        margin-top: 72px;
-        margin-bottom: 19px;
-    }
-    &__heading-line {
-        display: inline-block;
-        width: 20%;
-        height: 3px;
-        margin: 0 10px;
-        background-color: #ffffff;
+        line-height: 0.5;
+        margin: 72px 10px 0;
+        &_accessories {
+            font-family: "Merriweather Sans";
+            font-size: 30px;
+            line-height: 22px;
+            font-weight: 800;
+            margin: 0 10px;
+        }
+        &_women {
+            font-size: 18px;
+            text-transform: none;
+            margin: 0 10px;
+        }
+        &_styles {
+            font-family: "Merriweather Sans";
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1;
+            text-transform: uppercase;
+            color: #333333;
+            margin: 0 9px;
+        }
     }
     &__heading-text {
         font-family: "Roboto Condensed";
@@ -776,10 +819,101 @@ h4 {
     &__top {
         display: grid;
         grid-template-columns: 1fr 1fr 25%;
-        grid-template-rows: 8;
+        grid-template-rows: repeat(16, 80px);
+        align-items: center;
         &_paddings {
             padding: 60px 0;
         }
+        &_pt0 {
+            padding-top: 0;
+        }
+    }
+    &__top-about {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        grid-column-end: 2;
+        border-bottom: 1px solid #2a2a2a;
+    }
+    &__top-favorite {
+        grid-row-start: 1;
+        grid-row-end: 6;
+        grid-column-end: 3;
+        border-left: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
+        max-width: 96%;
+        justify-self: center;
+    }
+    &__top-info-top {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    &__top-info-middle {
+        grid-row-start: 5;
+        grid-row-end: 9;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    &__top-info-bottom {
+        grid-row-start: 9;
+        grid-row-end: 13;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    &__top-info-bottom-lower {
+        grid-row-start: 13;
+        grid-row-end: 17;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    &__top-blog {
+        grid-row-start: 5;
+        grid-row-end: 10;
+        grid-column-end: 2;
+        border-bottom: 1px solid #2a2a2a;
+        border-left: none;
+    }
+    &__top-contact {
+        grid-row-start: 10;
+        grid-row-end: 15;
+        grid-column-end: 2;
+        border-bottom: 1px solid #2a2a2a;
+        border-left: none;
+    }
+    &__top-email {
+        position: relative;
+        grid-row-start: 15;
+        grid-row-end: 18;
+        grid-column-end: 2;
+        border-bottom: 1px solid #2a2a2a;
+        border-left: none;
+        &::after {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            content: ">";
+            font-family: "Didact Gothic";
+            font-size: 27px;
+            line-height: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #999999;
+        }
+    }
+    &__top-promokit {
+        grid-row-start: 6;
+        grid-row-end: 12;
+        grid-column-end: 3;
+        border-left: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
+    }
+    &__top-facebook {
+        grid-row-start: 12;
+        grid-row-end: 18;
+        grid-column-end: 3;
+        border-left: 1px solid #2a2a2a;
+        border-bottom: 1px solid #2a2a2a;
     }
     &_pt {
         padding-top: 89px;
@@ -787,11 +921,7 @@ h4 {
     &_blog {
         flex-basis: 100%;
     }
-    &__top-about {
-        grid-row-end: 2;
-        grid-column-end: 2;
-        border-bottom: 1px solid #2a2a2a;
-    }
+
     &__top-heading {
         font-family: Cousine;
         font-size: 17px;
@@ -837,15 +967,7 @@ h4 {
             margin-left: 6px;
         }
     }
-    &__top-favorite {
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-end: 3;
-        border-left: 1px solid #2a2a2a;
-        border-bottom: 1px solid #2a2a2a;
-        max-width: 96%;
-        justify-self: center;
-    }
+
     &__top-favorite-header {
         display: flex;
         justify-content: space-between;
@@ -894,44 +1016,7 @@ h4 {
         border-bottom: 1px solid #2a2a2a;
         border-left: 1px solid #2a2a2a;
     }
-    &__top-info-top {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    &__top-info-middle {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    &__top-info-bottom {
-        grid-row-start: 4;
-        grid-row-end: 6;
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    &__top-info-bottom-lower {
-        grid-row-start: 6;
-        grid-row-end: 8;
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    &__top-blog {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-end: 2;
-        border-bottom: 1px solid #2a2a2a;
-        border-left: none;
-    }
-    &__top-contact {
-        grid-row-start: 4;
-        grid-row-end: 6;
-        grid-column-end: 2;
-        border-bottom: 1px solid #2a2a2a;
-        border-left: none;
-    }
+
     &__top-favorite-cards-contact {
         align-items: flex-start;
     }
@@ -965,27 +1050,7 @@ h4 {
         padding: 20px 0;
         cursor: pointer;
     }
-    &__top-email {
-        align-self: center;
-        position: relative;
-        grid-row-start: 6;
-        grid-row-end: 8;
-        grid-column-end: 2;
-        border-bottom: 1px solid #2a2a2a;
-        border-left: none;
-        &::after {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            content: ">";
-            font-family: "Didact Gothic";
-            font-size: 27px;
-            line-height: 40px;
-            font-weight: 400;
-            text-transform: uppercase;
-            color: #999999;
-        }
-    }
+
     &__top-email-input {
         border: 1px solid #666666;
         width: 100%;
@@ -993,13 +1058,7 @@ h4 {
         box-sizing: border-box;
         outline: none;
     }
-    &__top-promokit {
-        grid-row-start: 3;
-        grid-row-end: 5;
-        grid-column-end: 3;
-        border-left: 1px solid #2a2a2a;
-        border-bottom: 1px solid #2a2a2a;
-    }
+
     &__top-button {
         padding: 6px 11px;
         text-decoration: none;
@@ -1105,13 +1164,7 @@ h4 {
             margin-right: 8px;
         }
     }
-    &__top-facebook {
-        grid-row-start: 5;
-        grid-row-end: 8;
-        grid-column-end: 3;
-        border-left: 1px solid #2a2a2a;
-        border-bottom: 1px solid #2a2a2a;
-    }
+
     &__top-facebook-cards {
         display: grid;
         grid-template-rows: repeat(2, 1fr);
