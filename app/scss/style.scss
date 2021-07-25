@@ -112,12 +112,85 @@ h4 {
     }
     &__bottom {
     }
+    &__mobile {
+        &-logo {
+            text-align: center;
+        }
+        &-menu {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 19px;
+            @media screen and (max-width: 320px) {
+                display: flex;
+            }
+            &-left,
+            &-right {
+                font-family: Cousine;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: uppercase;
+                color: #565656;
+            }
+            &-right {
+                display: flex;
+                justify-content: end;
+            }
+            &-burger {
+                position: relative;
+                font-weight: 700;
+                margin-left: 26px;
+                & span {
+                    display: inline-block;
+                    width: 16px;
+                    background-color: #666666;
+                    border: 1px solid #666666;
+                    position: absolute;
+                    top: 7px;
+                    left: -26px;
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        display: inline-block;
+                        width: 16px;
+                        background-color: #666666;
+                        border: 1px solid #666666;
+                        position: absolute;
+                    }
+                    &::before {
+                        top: 4px;
+                        left: -1px;
+                    }
+                    &::after {
+                        top: -6px;
+                        left: -1px;
+                    }
+                }
+            }
+            &-basket {
+                align-self: flex-start;
+                padding-right: 9px;
+            }
+            &-price {
+                font-weight: 400;
+                align-self: flex-end;
+            }
+            &-content {
+                z-index: -10;
+                display: none;
+                @media screen and (max-width: 320px) {
+                    display: flex;
+                }
+            }
+        }
+    }
     &__finder {
         position: relative;
         text-align: right;
         @media screen and (max-width: 724px) {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
         }
         @media screen and (max-width: 320px) {
@@ -137,7 +210,7 @@ h4 {
             border: 1px solid #e1e1e1;
             outline: none;
             @media screen and (max-width: 724px) {
-                margin-top: 0px;
+                margin-top: 10px;
             }
             @media screen and (max-width: 320px) {
                 margin-bottom: 26px;
@@ -145,10 +218,10 @@ h4 {
         }
         &-image {
             position: absolute;
-            top: 30px;
+            top: 25px;
             right: 11px;
             @media screen and (max-width: 320px) {
-                top: 124px;
+                top: 14px;
                 right: 10px;
             }
         }
@@ -773,7 +846,7 @@ h4 {
                 @media screen and (max-width: 724px) {
                     font-size: 13px;
                     line-height: 25px;
-                    margin-bottom: 320px;
+                    margin-bottom: 250px;
                 }
                 &-top {
                     font-family: Cousine;
@@ -916,7 +989,6 @@ h4 {
                 margin-bottom: 11px;
             }
             &_women {
-                align-items: center;
             }
         }
         &-line {
@@ -983,7 +1055,7 @@ h4 {
             margin: 0 10px;
             @media screen and (max-width: 724px) {
                 font-size: 15px;
-                line-height: 35px;
+                line-height: 1px;
             }
         }
         &_styles {
@@ -1107,7 +1179,7 @@ h4 {
     }
     &__content {
         display: grid;
-        grid-template: repeat(2, 410px) / repeat(4, 1fr);
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
         grid-gap: 2%;
         max-width: 1170px;
         justify-content: center;
@@ -1118,9 +1190,9 @@ h4 {
         }
         @media screen and (max-width: 320px) {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(5, 420px);
-            grid-auto-rows: 0;
+            grid-template-rows: repeat(5, 400px);
             overflow-y: hidden;
+            row-gap: 0;
         }
     }
     &__card {
@@ -2020,7 +2092,7 @@ h4 {
     transition: all 0.3s ease-in;
     cursor: pointer;
     @media screen and (max-width: 940px) {
-        bottom: 55px;
+        bottom: 63px;
         right: 34px;
     }
     @media screen and (max-width: 724px) {
