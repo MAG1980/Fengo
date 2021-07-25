@@ -30,6 +30,11 @@
                         <li class="header__top-list"><a href="#" class="header__top-link header__top-link_ms-show">Log
                                 In</a></li>
                     </ul>
+                    <ul class="header__top-left header__top-left_xs">
+                        <li class="header__top-list"><a href="#" class="header__top-link pl0">My Account</a></li>
+                        <li class="header__top-list"><a href="#" class="header__top-link">MY Wishlist (0)</a></li>
+                        <li class="header__top-list"><a href="#" class="header__top-link">Checkout</a></li>
+                    </ul>
                     <ul class="header__top-right">
                         <li class="header__top-list"><a class="header__top-link">US Dollar</a></li>
                         <li class="header__top-list"><a class="header__top-link">English</a></li>
@@ -37,14 +42,18 @@
                     </ul>
                 </div>
             </div>
+            <ul class="header__top-right header__top-right_xs">
+                <li class="header__top-list"><a class="header__top-link header__top-link_xs">US Dollar</a></li>
+                <li class="header__top-list"><a class="header__top-link header__top-link_xs">English</a></li>
+            </ul>
         </div>
         <div class="header__bottom container">
             <form class="header__finder">
                 <a class="header__logo header__logo_finder header__link pl0 pr0" href="#">
                     <img class="header__logo-img" src="img/logo.png" alt="логотип">
                     <p class="header__logo-text">FENGO</p>
-
                 </a>
+                <p class="header__top-link_xs">Log In or register</p>
                 <input type="text" class="header__finder-input" type="text" placeholder="Find it here...">
                 <img class="header__finder-image" src="img/icons/search_icon.png" alt="поиск">
             </form>
@@ -88,6 +97,21 @@
         </div>
         <div class="offer__arrow-right">&#xf138;</div>
     </section>
+    <article class="blocks__wide-slider blocks__wide-slider_offer-xs">
+
+        <img class="blocks__offer-image" src="img/autumn_1.jpg" alt="осенний лес">
+        <div class="blocks__offer blocks__offer_xs">
+            <div class="blocks__offer-header">
+                <div class="blocks__offer-line"></div>
+                <h4 class="blocks__heading blocks__heading_xs">you pay less</h4>
+                <div class="blocks__offer-line"></div>
+            </div>
+            <p class="blocks__heading-text">everyone else pays attention.</p>
+            <p class="blocks__text-bottom blocks__text-bottom_slider">get your discount</p>
+        </div>
+
+
+    </article>
     <section class="blocks">
         <div class="container blocks__content">
             <div class="blocks__wide">
@@ -522,10 +546,11 @@
                             <div class="blocks__arrow-right blocks__arrow-right_footer">&#xf138;</div>
                         </div>
                     </div>
-                    <div class="footer__top-favorite-cards">
+                    <div class="footer__top-favorite-cards footer__top-favorite-cards_show">
                         <div class="products__card footer__card">
                             <a href="#" class="products__card-product">
-                                <img class="products__card-img" src="img/products/product_2.jpg" alt="товар">
+                                <img class="products__card-img  products__card-img_footer"
+                                    src="img/products/product_2.jpg" alt="товар">
                                 <div class="products__info">
                                     <div class="products__description">
                                         <p class="products__material">Carded Cotton Shaw</p>
@@ -538,9 +563,10 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="products__card footer__card">
+                        <div class="products__card footer__card footer__card_hide footer__card_show">
                             <a href="#" class="products__card-product">
-                                <img class="products__card-img" src="img/products/product_5.jpg" alt="товар">
+                                <img class="products__card-img products__card-img_footer"
+                                    src="img/products/product_5.jpg" alt="товар">
                                 <div class="products__info">
                                     <div class="products__description">
                                         <p class="products__material">Carded Cotton Shaw</p>
@@ -599,7 +625,7 @@
                     </ul>
                 </div>
                 <div class="footer__top-info footer__top-info-bottom-lower footer__top_pt">
-                    <h4 class="footer__top-heading footer__top-heading_mb">INFORMATION</h4>
+                    <h4 class="footer__top-heading footer__top-heading_mb">CONTACT INFO</h4>
                     <ul class="footer__top-info-list">
                         <li class="footer__top-info-link"><a href="#" class="footer__top-info-link">CONTACT INFO</a>
                         </li>
@@ -632,7 +658,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="products__card footer__card">
+                        <div class="products__card footer__card footer__card_hide">
                             <a href="#" class="products__card-product">
                                 <img class="products__card-img" src="img/autumn_4.jpg" alt="товар">
                                 <div class="products__info">
@@ -666,9 +692,13 @@
                         </form>
                     </div>
                 </div>
-                <div class="footer__top-email footer__top_pt">
-                    <input type="email" class="footer__top-contact-ps footer__top-email-input"
+                <div class="footer__top-email">
+                    <input type="email"
+                        class="footer__top-contact-ps footer__top-email-input footer__top-email-input_hide"
                         placeholder="Enter your e-mail for stay in the know">
+                    <input type="email"
+                        class="footer__top-contact-ps footer__top-email-input footer__top-email-input_show"
+                        placeholder="Enter your e-mail">
                 </div>
                 <div class="footer__top-favorite footer__top-promokit footer__top_pt">
                     <div class="footer__top-favorite-header footer__top-favorite-header_aic">
@@ -769,22 +799,24 @@
                         <img src="img/icons/credit_card_5.png" alt="банковская карта" class="footer__bottom-img">
                         <img src="img/icons/credit_card_6.jpg" alt="банковская карта" class="footer__bottom-img">
                     </div>
-                    <p class="footer__bottom-left-text">© 2013 Powered by WooCommerce™. All Rights Reserved.</p>
                 </div>
                 <div class="footer__bottom-right"></div>
+
                 <div class="footer__bottom-icons">
                     <a class="footer__bottom-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a class="footer__bottom-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a class="footer__bottom-link"> <i class="fa fa-wifi fa-rotate-90" aria-hidden="true"></i></a>
+                    <a class="footer__bottom-link"> <i class="fa fa-wifi" aria-hidden="true"></i></a>
                     <a class="footer__bottom-link"><i class="fa fa-skype" aria-hidden="true"></i></a>
                     <a class="footer__bottom-link"><i class="fa fa-delicious" aria-hidden="true"></i></a>
                     <a class="footer__bottom-link"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                     <a class="footer__bottom-link"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
+            <p class="footer__bottom-left-text">© 2013 Powered by WooCommerce™. All Rights Reserved.</p>
+            <div class="arrow-top" onclick="goUp()"></div>
         </div>
+
     </footer>
-    <div class="arrow-top" onclick="goUp()"></div>
 
     <script src="js/main.min.js"></script>
 </body>
